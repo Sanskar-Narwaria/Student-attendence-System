@@ -1,0 +1,54 @@
+.button_close{
+	-fx-background-color: #DEDEDE;
+	-fx-font-size: 10px;
+	-fx-font-weight: bold;
+	-fx-border-width: 2px;
+	-fx-border-color: #C7C7C7;
+	
+}
+.button_close:hover{
+	-fx-background-color: #FF0000;
+	-fx-border-color: #FF1818;
+	-fx-text-fill: white;
+	
+}
+
+.body{
+	-fx-background-color: linear-gradient(to right,#8e0e00,#1f1c18 );
+}
+
+.button_confirm {
+    -fx-background-color: #65B741;
+    -fx-text-fill: #fff;
+    -fx-font-weight: bolder;
+    -fx-border-width: 0px;
+    -fx-border-radius: 3px;
+    -fx-padding: 10px 20px;
+    -fx-cursor: hand;
+}
+
+/* Mouse hover effect for buttons */
+.button_confirm:hover {
+    -fx-background-color: #0056b3;
+}
+
+.text-field {
+    -fx-background-color: #f9f9f9;
+    -fx-border-color: #ccc;
+    -fx-border-width: 1px;
+    -fx-border-radius: 3px;
+    -fx-padding:6;
+    -fx-pref-width: 200px;
+    -fx-font-weight: bold;
+    -fx-pref-height:24px;
+}
+
+/* Mouse hover effect for text fields */
+.text-field:hover {
+    -fx-border-color: #66ccff;
+}
+
+.txt{
+	-fx-font-size: 17px;
+	-fx-font-weight: bold;
+}

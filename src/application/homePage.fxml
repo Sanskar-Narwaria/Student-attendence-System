@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" stylesheets="@homePage.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.homePageController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <BorderPane layoutX="1.0" prefHeight="800.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.400000000000091" AnchorPane.topAnchor="0.0">
+               <top>
+                  <AnchorPane prefHeight="51.0" prefWidth="1200.0" styleClass="top_bar" BorderPane.alignment="CENTER">
+                     <children>
+                        <ImageView fitHeight="53.0" fitWidth="52.0" layoutX="25.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@homePageicon1.png" />
+                           </image>
+                        </ImageView>
+                        <Text fill="WHITE" layoutX="98.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="top_bar_text" text="Student Attendence">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="closeBtn" layoutX="1147.0" layoutY="12.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="38.0" prefWidth="39.0" styleClass="button_close" text="X" />
+                     </children>
+                  </AnchorPane>
+               </top>
+               <left>
+                  <AnchorPane prefHeight="739.0" prefWidth="236.0" styleClass="side_left" BorderPane.alignment="CENTER">
+                     <children>
+                        <Text fill="WHITE" layoutX="54.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="side_left_text" text="Welcome" wrappingWidth="108.75238037109375">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Line endX="103.60000610351562" layoutX="115.0" layoutY="241.0" startX="-100.0" stroke="WHITE" strokeWidth="2.5" />
+                        <Button fx:id="takeAtt_btn" layoutX="15.0" layoutY="259.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="38.0" prefWidth="200.0" text="Take Attendence" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="34.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../Downloads/appointment_11370107.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Text fx:id="username" fill="WHITE" layoutX="19.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="side_left_text" text="  Username" wrappingWidth="216.0515751838684">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <ImageView fitHeight="125.0" fitWidth="134.0" layoutX="46.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../Downloads/man-user-circle-icon.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="signOutBtn" layoutX="12.0" layoutY="683.0" mnemonicParsing="false" onAction="#signOut" prefHeight="32.0" prefWidth="210.0" text="Sign Out">
+                           <graphic>
+                              <ImageView fitHeight="28.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../Downloads/logout_11262112.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="viewAtt_btn" layoutX="15.0" layoutY="319.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="38.0" prefWidth="200.0" text="View Attendence" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="34.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../Downloads/calendar_1212714.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="modify_btn" layoutX="15.0" layoutY="378.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="45.0" prefWidth="200.0" text="Modification">
+                           <graphic>
+                              <ImageView fitHeight="34.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../Downloads/setting_8556484.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="backAnchor" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="pageViewAttendence" layoutX="9.0" layoutY="8.0" prefHeight="724.0" prefWidth="943.0" styleClass="inPages">
+                           <children>
+                              <TableView fx:id="tableViewAttendence" layoutX="14.0" layoutY="93.0" prefHeight="360.0" prefWidth="914.0" />
+                              <Text layoutX="97.0" layoutY="549.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Class ">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Text>
+                              <ChoiceBox fx:id="choiceBranch1" layoutX="55.0" layoutY="562.0" prefHeight="16.0" prefWidth="171.0" />
+                              <Button layoutX="55.0" layoutY="602.0" mnemonicParsing="false" onMouseClicked="#calAttendence" prefHeight="36.0" prefWidth="175.0" styleClass="cal-btn" text="Calculate">
+                                 <graphic>
+                                    <ImageView fitHeight="27.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../Downloads/calculator_4052537.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Text layoutX="31.0" layoutY="513.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Calculate Attendence" wrappingWidth="222.45440673828125">
+                                 <font>
+                                    <Font size="23.0" />
+                                 </font>
+                              </Text>
+                              <Button layoutX="55.0" layoutY="647.0" mnemonicParsing="false" onMouseClicked="#clearTableCalAttendence" prefHeight="36.0" prefWidth="175.0" styleClass="btn-clr2" text="Clear Table">
+                                 <graphic>
+                                    <ImageView fitHeight="27.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../Downloads/cleaning_1619829.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <TableView fx:id="tableViewCalAttendence" layoutX="262.0" layoutY="465.0" prefHeight="250.0" prefWidth="665.0" />
+                              <Button layoutX="712.0" layoutY="4.0" mnemonicParsing="false" onMouseClicked="#getBranch" prefHeight="32.0" prefWidth="215.0" styleClass="btn-search" text="Search" />
+                              <Button layoutX="712.0" layoutY="50.0" mnemonicParsing="false" onMouseClicked="#clrTable" prefHeight="34.0" prefWidth="216.0" styleClass="btn-clr" text="Clear Table" />
+                              <Text layoutX="47.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Class : ">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </Text>
+                              <ChoiceBox fx:id="choiceBranch" layoutX="151.0" layoutY="12.0" prefHeight="29.0" prefWidth="187.0" />
+                              <Text layoutX="371.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Date : ">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </Text>
+                              <DatePicker fx:id="AttDate" layoutX="471.0" layoutY="9.0" prefHeight="33.0" prefWidth="190.0" />
+                              <Text layoutX="31.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Student Name : ">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="StuName" layoutX="201.0" layoutY="48.0" prefHeight="35.0" prefWidth="245.0" promptText="Student Name" visible="false" />
+                              <ChoiceBox fx:id="displayNames" layoutX="212.0" layoutY="53.0" prefHeight="29.0" prefWidth="227.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="pageTakeAttendence" layoutX="9.0" layoutY="9.0" prefHeight="721.0" prefWidth="943.0" styleClass="inPages" visible="false" AnchorPane.bottomAnchor="9.399999999999977" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="10.199999999999932" AnchorPane.topAnchor="9.0">
+                           <children>
+                              <TableView fx:id="tableTakeAttendence" layoutX="352.0" layoutY="8.0" prefHeight="704.0" prefWidth="583.0" />
+                              <Text layoutX="81.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Branch :">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Text>
+                              <ChoiceBox fx:id="choiceBranchTakeAttendence" layoutX="40.0" layoutY="186.0" prefHeight="30.0" prefWidth="230.0" />
+                              <Text layoutX="90.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Date :">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Text>
+                              <DatePicker fx:id="datePickerTakeAtt" layoutX="39.0" layoutY="277.0" prefHeight="35.0" prefWidth="232.0" />
+                              <Button layoutX="86.0" layoutY="345.0" mnemonicParsing="false" onMouseClicked="#takeAttendence" prefHeight="50.0" prefWidth="149.0" styleClass="btn_take_att" text="Take Attendence" />
+                              <Button layoutX="86.0" layoutY="419.0" mnemonicParsing="false" onMouseClicked="#submitAttendence" prefHeight="50.0" prefWidth="148.0" styleClass="btn_submit_att" text="Submit" />
+                              <Button layoutX="86.0" layoutY="486.0" mnemonicParsing="false" onMouseClicked="#clearTableTakeAttendence" prefHeight="50.0" prefWidth="147.0" styleClass="btn_clear_table_att" text="Clear Table" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="pageModification" layoutX="22.0" layoutY="5.0" prefHeight="715.0" prefWidth="939.0" styleClass="inPages" visible="false">
+                           <children>
+                              <Text layoutX="120.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Enrolled Students">
+                                 <font>
+                                    <Font size="8.0" />
+                                 </font></Text>
+                              <ChoiceBox fx:id="selectBranchMain" layoutX="217.0" layoutY="27.0" prefHeight="29.0" prefWidth="174.0" />
+                              <Text layoutX="58.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 18; -fx-font-weight: bold;" text="Select Branch : ">
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font></Text>
+                              <Button layoutX="413.0" layoutY="25.0" mnemonicParsing="false" onMouseClicked="#showRecord" prefHeight="34.0" prefWidth="133.0" styleClass="btn_show_record" text="Show Records" />
+                              <Button layoutX="561.0" layoutY="25.0" mnemonicParsing="false" onMouseClicked="#clearRecord" prefHeight="34.0" prefWidth="130.0" styleClass="btn_clear_record" text="Clear Records" />
+                              <Button fx:id="show1" layoutX="91.0" layoutY="541.0" mnemonicParsing="false" onAction="#showThings" prefHeight="42.0" prefWidth="138.0" styleClass="btn_insert_stu" text="Insert New Student" />
+                              <Button fx:id="show2" layoutX="92.0" layoutY="600.0" mnemonicParsing="false" onAction="#showThings" prefHeight="44.0" prefWidth="135.0" styleClass="btn_update_stu" text="Update Record" />
+                              <Button fx:id="show3" layoutX="94.0" layoutY="658.0" mnemonicParsing="false" onAction="#showThings" prefHeight="41.0" prefWidth="130.0" styleClass="btn_delete_stu" text="Delete Record" />
+                              <AnchorPane fx:id="AnchoreInsertStudent" layoutX="391.0" layoutY="453.0" prefHeight="246.0" prefWidth="375.0" style="-fx-background-color: transparent;">
+                                 <children>
+                                    <Text fx:id="textBranch" layoutX="84.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 16; -fx-font-weight: bold;" text="Select Branch : " visible="false" />
+                                    <ChoiceBox fx:id="selectBranchInsert" layoutX="218.0" layoutY="31.0" prefHeight="30.0" prefWidth="205.0" visible="false" />
+                                    <Text fx:id="insertText" layoutX="50.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 16; -fx-font-weight: bold;" text="Enter Student Name : " visible="false" />
+                                    <TextField fx:id="textStuName" layoutX="229.0" layoutY="77.0" prefHeight="35.0" prefWidth="238.0" visible="false" />
+                                    <Button fx:id="btn_addStudent" layoutX="158.0" layoutY="147.0" mnemonicParsing="false" onMouseClicked="#addStudent" prefHeight="34.0" prefWidth="159.0" styleClass="btn_insert_stu" text="Add Student" visible="false" />
+                                    <ChoiceBox fx:id="chocieStudName" layoutX="218.0" layoutY="89.0" prefHeight="32.0" prefWidth="205.0" visible="false" />
+                                    <Text fx:id="textSelectStudent" layoutX="81.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 16; -fx-font-weight: bold;" text="Select Student : " visible="false" />
+                                    <Text fx:id="textSelectDate" layoutX="98.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 16; -fx-font-weight: bold;" text="Select Date : " visible="false" />
+                                    <DatePicker fx:id="datePickUpdate" layoutX="221.0" layoutY="145.0" prefHeight="26.0" prefWidth="200.0" visible="false" />
+                                    <Text fx:id="textStatus" layoutX="92.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 16; -fx-font-weight: bold;" text="Select Status : " visible="false" />
+                                    <ChoiceBox fx:id="choiceStatus" layoutX="219.0" layoutY="213.0" prefHeight="29.0" prefWidth="77.0" visible="false" />
+                                    <Button fx:id="update_btn" layoutX="305.0" layoutY="208.0" mnemonicParsing="false" onMouseClicked="#updateStudent" prefHeight="38.0" prefWidth="125.0" styleClass="btn_update_stu" text="Update" visible="false" />
+                                    <Button fx:id="delete_btn" layoutX="190.0" layoutY="170.0" mnemonicParsing="false" onMouseClicked="#deleteStudent" prefHeight="41.0" prefWidth="82.0" styleClass="btn_delete_stu" text="Delete" visible="false" />
+                                    <Button fx:id="deleteBranch_btn" layoutX="177.0" layoutY="94.0" mnemonicParsing="false" onMouseClicked="#deleteBranch" prefHeight="47.0" prefWidth="120.0" styleClass="btn_delete_Branch" text="Delete Branch" visible="false" />
+                                    <Text fx:id="textBranchEnter" layoutX="62.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 16; -fx-font-weight: bold;" text="Enter Branch Name : " visible="false" />
+                                    <TextField fx:id="getBranchName" layoutX="231.0" layoutY="26.0" promptText="Enter Branch Name" visible="false" />
+                                    <Button fx:id="InsertBranch_btn" layoutX="169.0" layoutY="96.0" mnemonicParsing="false" onMouseClicked="#addBranch" prefHeight="34.0" prefWidth="160.0" styleClass="btn_insert_newBranch" text="Insert Branch" visible="false" />
+                                 </children>
+                              </AnchorPane>
+                              <Button fx:id="show4" layoutX="275.0" layoutY="562.0" mnemonicParsing="false" onAction="#showThings" prefHeight="42.0" prefWidth="138.0" styleClass="btn_insert_newBranch" text="Insert New Branch" />
+                              <Button fx:id="show5" layoutX="274.0" layoutY="623.0" mnemonicParsing="false" onAction="#showThings" prefHeight="42.0" prefWidth="139.0" styleClass="btn_delete_Branch" text="Delete Branch" />
+                              <TableView fx:id="enrolledStudents" layoutX="25.0" layoutY="98.0" prefHeight="402.0" prefWidth="354.0" />
+                              <TableView fx:id="Currentbranches" layoutX="599.0" layoutY="113.0" prefHeight="302.0" prefWidth="257.0" />
+                              <Text layoutX="650.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Current Branches" />
+                              <Button layoutX="433.0" layoutY="181.0" mnemonicParsing="false" onMouseClicked="#showBranches" prefHeight="38.0" prefWidth="147.0" styleClass="btn_showBranches" text="Show Branches" />
+                              <Button layoutX="433.0" layoutY="251.0" mnemonicParsing="false" onMouseClicked="#clearBranches" prefHeight="38.0" prefWidth="147.0" styleClass="btn_clearBranches" text="Clear Table" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

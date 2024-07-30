@@ -1,0 +1,74 @@
+.button_close{
+	-fx-background-color: #DEDEDE;
+	-fx-font-size: 14px;
+	-fx-font-weight: bold;
+	-fx-border-width: 2px;
+	-fx-border-color: #C7C7C7;
+	
+}
+.button_close:hover{
+	-fx-background-color: #FF0000;
+	-fx-border-color: #FF1818;
+	-fx-text-fill: white;
+	
+}
+.text-field {
+    -fx-background-color: #f9f9f9;
+    -fx-border-color: #ccc;
+    -fx-border-width: 1px;
+    -fx-border-radius: 3px;
+    -fx-padding: 8px;
+    -fx-pref-width: 250px;
+    -fx-font-weight: bold;
+}
+
+/* Mouse hover effect for text fields */
+.text-field:hover {
+    -fx-border-color: #66ccff;
+}
+
+.txt{
+	-fx-font-size: 17px;
+	-fx-font-weight: bold;
+	-fx-text-fill:white;
+}
+
+.txt1{
+	-fx-font-size: 14px;
+	-fx-text-fill:white;
+	-fx-font-weight: bold;
+}
+
+.txt_signup{
+	-fx-font-size: 25px;
+	-fx-font-weight: bold;
+	-fx-text-fill: #333333;
+	
+}
+
+.body{
+    -fx-background-color: linear-gradient(to right,#42275a,#734b6d );
+	-fx-background-radius:25px;
+	-fx-border-color:#FAEF5D;
+	-fx-border-width:2px;
+	-fx-border-radius:24px;
+}
+
+.transparent-background {
+    -fx-background-color: transparent;
+}
+
+.button_signUp {
+    -fx-background-color: #FF004D;
+    -fx-text-fill: #fff;
+    -fx-font-weight: bolder;
+    -fx-border-width: 0px;
+    -fx-border-radius: 3px;
+    -fx-padding: 10px 20px;
+    -fx-cursor: hand;
+}
+
+/* Mouse hover effect for buttons */
+.button_signUp:hover {
+    -fx-background-color: #0056b3;
+}

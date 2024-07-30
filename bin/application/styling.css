@@ -1,0 +1,78 @@
+.anchorLeft{
+    -fx-background-color: linear-gradient(to right,#8EC5FC,#E0C3FC)
+}
+.login-container {
+    -fx-background-color: #ffff;
+    -fx-padding: 5px;
+    -fx-alignment: center;
+}
+.button_close{
+	-fx-background-color: #DEDEDE;
+	-fx-font-size: 10px;
+	-fx-font-weight: bold;
+	-fx-border-width: 2px;
+	-fx-border-color: #C7C7C7;
+	
+}
+.button_close:hover{
+	-fx-background-color: #FF0000;
+	-fx-border-color: #FF1818;
+	-fx-text-fill: white;
+	
+	
+}
+
+/* Styling for text fields */
+.text-field {
+    -fx-background-color: #f9f9f9;
+    -fx-border-color: #ccc;
+    -fx-border-width: 1px;
+    -fx-border-radius: 3px;
+    -fx-padding: 8px;
+    -fx-pref-width: 200px;
+    -fx-transition: all 0.3s ease;
+}
+
+/* Mouse hover effect for text fields */
+.text-field:hover {
+    -fx-border-color: #66ccff;
+}
+
+
+/* Styling for buttons */
+.button_login {
+    -fx-background-color: #F7418F;
+    -fx-text-fill: #fff;
+    -fx-font-weight: bolder;
+    -fx-border-width: 0px;
+    -fx-border-radius: 3px;
+    -fx-padding: 10px 20px;
+    -fx-cursor: hand;
+}
+
+/* Mouse hover effect for buttons */
+.button_login:hover {
+    -fx-background-color: #0056b3;
+}
+
+/* Styling for labels */
+.label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #666666;
+    -fx-font-weight: bold;
+}
+
+/* Styling for error message */
+.error-message {
+    -fx-font-size: 15px;
+    -fx-text-fill: red;
+    -fx-font-weight: bold;
+    -fx-font-family: "Arial Rounded MT Bold";
+}
+/* Fade transition effect for login container */
+
+.anchorLeft-inside{
+    -fx-background-image: url('attendance_6612108.png');
+    -fx-background-size: cover;
+}
+
